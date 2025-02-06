@@ -26,3 +26,4 @@ mkdir thunderbird
 mkdir zookeeper
 
 cd ..
+mkdir ssh-scripts
