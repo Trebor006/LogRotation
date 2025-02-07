@@ -46,16 +46,18 @@ ls
 
 echo "* Clonando archivos sh"
 
+echo "Descargando configuración CRON diaro!!"
 wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_daily.sh -O cron_job_daily.sh && chmod +x cron_job_daily.sh 
-#&& ./cron_job_daily.sh 
-wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_monthly.sh -O cron_job_monthly.sh && chmod +x cron_job_monthly.sh 
-#&& ./cron_job_monthly.sh 
+
+echo "Descargando configuración CRON Mensual"
+wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_monthly.sh -O cron_job_monthly.sh && chmod +x cron_job_monthly.sh
+
+#apache resumen
+echo "Descargando Validador APACHE"
+wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/apache_404_resumen.sh -O apache_404_resumen.sh && chmod +x apache_404_resumen.sh
+
+#configure crons!!!
+echo "Configurando Crons!! y ejecutando!"
+wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/config_crons.sh -O config_crons.sh && chmod +x config_crons.sh && ./config_crons.sh
 
 cd ..
-
-
-#Configure cronjob daily
-echo logRotation/ssh-scripts/cron_job_daily.sh
-
-#Configure cronjob monthly
-echo logRotation/ssh-scripts/cron_job_monthly.sh
