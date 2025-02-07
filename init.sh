@@ -35,6 +35,7 @@ mkdir zookeeper
 echo "---zookeeper"
 
 cd ..
+mkdir execution-logs
 mkdir ssh-scripts
 
 cd ssh-scripts
@@ -45,10 +46,10 @@ ls
 
 echo "* Clonando archivos sh"
 
-wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_daily.sh -O cron_job_daily.sh 
-#&& chmod +x cron_job_daily.sh && ./cron_job_daily.sh 
-wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_monthly.sh -O cron_job_monthly.sh 
-#&& chmod +x cron_job_monthly.sh && ./cron_job_monthly.sh 
+wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_daily.sh -O cron_job_daily.sh && chmod +x cron_job_daily.sh 
+#&& ./cron_job_daily.sh 
+wget https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/cron_job_monthly.sh -O cron_job_monthly.sh && chmod +x cron_job_monthly.sh 
+#&& ./cron_job_monthly.sh 
 
 cd ..
 
