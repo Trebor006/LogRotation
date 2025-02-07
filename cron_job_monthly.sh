@@ -36,14 +36,14 @@ for folder in "${folders[@]}"; do
         
         # Si la transferencia fue exitosa, eliminar el archivo local
         if [ $? -eq 0 ]; then
-            echo "Archivo $file transferido correctamente a $remote_folder. Eliminando..."
+            echo "MONTHLY:: Archivo $file transferido correctamente a $remote_folder. Eliminando..."
             rm "$file"
         else
-            echo "Error al transferir $file. No se eliminará."
+            echo "MONTHLY:: Error al transferir $file. No se eliminará."
         fi
     done
 done
 
-echo "Transferencia y limpieza de archivos completada."
+echo "MONTHLY:: Transferencia y limpieza de archivos completada."
 
 
