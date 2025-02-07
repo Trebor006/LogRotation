@@ -6,7 +6,7 @@
 cd "$HOME/logRotation/logs"
 
 #--------------------------------------------------------
-
+echo -e "\e[35mMONTHLY:: Iniciando transferecia de Archivos al servidor remoto.\n\e[0m"
 
 # Definir el array con los nombres de los folders
 folders=("apache" "open-ssh" "thunderbird" "android" "windows" "zookeeper")
@@ -44,6 +44,6 @@ for folder in "${folders[@]}"; do
     done
 done
 
-echo -e "\e[35mMONTHLY:: Transferencia y limpieza de archivos completada.\e[0m"
+echo -e "\e[35mMONTHLY:: Transferencia y limpieza de archivos completada.\n\n\n\e[0m"
 
 

@@ -3,6 +3,8 @@
 #Backups Logs and move files
 cd "$HOME/logRotation/projects_logs"
 
+echo -e "\e[36mDAILY:: INICIANDO BACKUPS DE LOGS\e[0m"
+
 #Apache
 apacheBackupFile="apache-$(date +%Y%m%d-%H%M%S).tar.gz" 
 echo -e "\e[36mDAILY:: creando backup de Apache: $apacheBackupFile\e[0m"
@@ -46,3 +48,5 @@ echo -e "\e[36mDAILY:: creando backup de Zookeeper: $zookeeperBackupFile\e[0m"
 tar -czvf "$zookeeperBackupFile" Zookeeper_2k.log
 echo -e "\e[36mDAILY:: backup $zookeeperBackupFile creado correctamente..\e[0m"
 mv "$zookeeperBackupFile" ../logs/zookeeper/
+
+echo -e "\e[36mDAILY:: BACKUPS DE LOGS TERMINADO\n\n\n\n\n\n\e[0m"

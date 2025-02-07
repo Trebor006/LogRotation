@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd "$HOME/logRotation/projects_logs"
+echo -e "\e[33mAPACHE:::Iniciando revisión de logs de APACHE\n.\e[0m"
 
 # Definir fecha actual en formato YYYY-MM-DD
 FECHA=$(date +"%Y-%m-%d")
@@ -36,4 +37,4 @@ awk '$6 == "[error]" { errores404++; }
 # Borrar el archivo después de enviarlo
 #rm -f "$ARCHIVO"
 
-echo -e "\e[33mReporte generado, enviado y eliminado correctamente.\e[0m"
+echo -e "\e[33mAPACHE:::Reporte generado, enviado y eliminado correctamente.\n\e[0m"

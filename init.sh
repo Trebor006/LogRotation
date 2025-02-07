@@ -68,4 +68,6 @@ cd
 
 cd ~/logRotation/execution-logs
 
+
+echo -e "\e[31mEsperando ejecución de logs ejecutando: \"tail -f ~/logRotation/execution-logs/executionlogs.log\" !\e[0m"
 tail -f executionlogs.log
