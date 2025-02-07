@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #crear el folder principal
 echo -e "\e[31m* Creando estructura de folders\e[0m"
 mkdir logRotation
@@ -64,6 +66,6 @@ wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/
 
 cd
 
-cd  "~/logRotation/execution-logs"
+cd ~/logRotation/execution-logs
 
 tail -f executionlogs.log

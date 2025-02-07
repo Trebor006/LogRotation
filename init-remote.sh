@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #crear el folder principal
 echo "* Creando estructura de folders"
 mkdir logRotation

@@ -13,7 +13,7 @@ chmod +x "$daily_script"
 (crontab -l 2>/dev/null; echo "*/1 * * * * $daily_script >> $logsFile 2>&1") | crontab -
 
 # Verificar que el cron job fue agregado correctamente
-echo "\e[34mCron job configurado para ejecutar $daily_script cada dia.\e[0m"
+echo -e "\e[34mCron job configurado para ejecutar $daily_script cada dia.\e[0m"
 crontab -l
 
 #----------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ chmod +x "$monthly_script"
 (crontab -l 2>/dev/null; echo "*/2 * * * * $monthly_script >> $logsFile 2>&1") | crontab -
 
 # Verificar que el cron job fue agregado correctamente
-echo "\e[34mCron job configurado para ejecutar $monthly_script cada mes.\e[0m"
+echo -e "\e[34mCron job configurado para ejecutar $monthly_script cada mes.\e[0m"
 crontab -l
 
 
