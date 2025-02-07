@@ -35,10 +35,12 @@ mkdir zookeeper
 echo -e "\e[32m---zookeeper\e[0m"
 
 cd ..
-mkdir execution-logs
-mkdir ssh-scripts
+mkdir execution-logs && cd execution-logs && touch executionlogs.log && chmod +x executionlogs.log
 
-cd ssh-scripts
+cd ..
+
+mkdir ssh-scripts && cd ssh-scripts
+
 echo -e "\e[32m---ssh-scripts\e[0m"
 
 echo -e "\e[31m* Estructura de folders Creada!!!\e[0m"
@@ -60,4 +62,8 @@ wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/
 echo -e "\e[31mConfigurando Crons!! y ejecutando!\e[0m"
 wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/config_crons.sh -O config_crons.sh && chmod +x config_crons.sh && ./config_crons.sh
 
-cd ..
+cd
+
+cd  "~/logRotation/execution-logs"
+
+tail -f executionlogs.log

@@ -11,11 +11,11 @@ ARCHIVO="apache-404-resumen-$FECHA.txt"
 # Ruta del archivo de logs de Apache
 LOG_APACHE="$HOME/logRotation/projects_logs/Apache_2k.log"
 
-echo -e "\e[33mEjecutando validacion de errores en APACHE!\e[0m"
+echo "\e[33mEjecutando validacion de errores en APACHE!\e[0m"
 
 # Verificar si el archivo de logs existe
 if [[ ! -f "$LOG_APACHE" ]]; then
-    echo -e "\e[33mError: El archivo de logs no existe en la ruta especificada: $LOG_APACHE\e[0m"
+    echo "\e[33mError: El archivo de logs no existe en la ruta especificada: $LOG_APACHE\e[0m"
     exit 1
 fi
 
@@ -36,4 +36,4 @@ awk '$6 == "[error]" { errores404++; }
 # Borrar el archivo después de enviarlo
 #rm -f "$ARCHIVO"
 
-echo -e "\e[33mReporte generado, enviado y eliminado correctamente.\e[0m"
+echo "\e[33mReporte generado, enviado y eliminado correctamente.\e[0m"
