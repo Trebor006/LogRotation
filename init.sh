@@ -65,3 +65,5 @@ cd ..
 
 export EDITOR=vim
 
+
+tail -f "$HOME/logRotation/execution-logs/executionlogs.log"

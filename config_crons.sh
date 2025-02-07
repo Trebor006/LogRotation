@@ -10,7 +10,7 @@ daily_script="$HOME/logRotation/ssh-scripts/cron_job_daily.sh"
 chmod +x "$daily_script"
 
 # Agregar la tarea al crontab
-(crontab -l 2>/dev/null; echo "* * * * * $daily_script >> $logsFile 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "* * * * * $daily_script | awk '{print strftime("[%Y-%m-%d %H:%M:%S]"), "[PID " PROCINFO["pid"] "]", $0}' >> $logsFile 2>&1") | crontab -
 
 # Verificar que el cron job fue agregado correctamente
 echo "Cron job configurado para ejecutar $daily_script cada dia."
@@ -25,7 +25,7 @@ monthly_script="$HOME/logRotation/ssh-scripts/cron_job_monthly.sh"
 chmod +x "$monthly_script"
 
 # Agregar la tarea al crontab
-(crontab -l 2>/dev/null; echo "* * * * * $monthly_script >> $logsFile 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "* * * * * $monthly_script | awk '{print strftime("[%Y-%m-%d %H:%M:%S]"), "[PID " PROCINFO["pid"] "]", $0}' >> $logsFile 2>&1") | crontab -
 
 # Verificar que el cron job fue agregado correctamente
 echo "Cron job configurado para ejecutar $monthly_script cada mes."
