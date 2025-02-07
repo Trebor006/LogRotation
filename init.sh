@@ -61,9 +61,3 @@ echo -e "\e[31mConfigurando Crons!! y ejecutando!\e[0m"
 wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/config_crons.sh -O config_crons.sh && chmod +x config_crons.sh && ./config_crons.sh
 
 cd ..
-
-
-export EDITOR=vim
-
-
-tail -f "$HOME/logRotation/execution-logs/executionlogs.log"
