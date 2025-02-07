@@ -1,4 +1,5 @@
 #Backups Logs and move files
+cd "$HOME/logRotation/projects_logs"
 
 #Apache
 apacheBackupFile="apache-$(date +%Y%m%d-%H%M%S).tar.gz" 

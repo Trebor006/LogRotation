@@ -3,7 +3,7 @@
 #Move files to remote repository
 #--------------------------------------------------------
 
-cd ~/logRotation/logs/
+cd "$HOME/logRotation/logs"
 
 #--------------------------------------------------------
 

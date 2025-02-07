@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$HOME/logRotation/projects_logs"
+
 # Definir fecha actual en formato YYYY-MM-DD
 FECHA=$(date +"%Y-%m-%d")
 

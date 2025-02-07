@@ -61,3 +61,7 @@ echo "Configurando Crons!! y ejecutando!"
 wget  https://raw.githubusercontent.com/Trebor006/LogRotation/refs/heads/master/config_crons.sh -O config_crons.sh && chmod +x config_crons.sh && ./config_crons.sh
 
 cd ..
+
+
+export EDITOR=vim
+

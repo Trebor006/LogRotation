@@ -34,16 +34,3 @@ crontab -l
 
 #----------------------------------------------------------------------------------------
 
-# Definir el script a ejecutar
-#target_script="$HOME/logRotation/ssh-scripts/test_cron.sh"
-
-# Asegurar que el script tenga permisos de ejecución
-#chmod +x "$target_script"
-
-# Agregar la tarea al crontab
-#(crontab -l 2>/dev/null; echo "* * * * * $target_script") | crontab -
-
-# Verificar que el cron job fue agregado correctamente
-#echo "Cron job configurado para ejecutar $target_script cada minuto."
-#crontab -l
-
