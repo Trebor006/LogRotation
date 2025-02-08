@@ -35,7 +35,7 @@ awk '$6 == "[error]" { errores404++; }
         print "Total de errores 404: " (errores404 ? errores404 : 0);
     }' "$LOG_APACHE" >> "$ARCHIVO"
 
-if $errores404 > $UMBRAL ; then
+if [ $errores404 -gt $UMBRAL ] ; then
   echo -e "\e[33mAPACHE:::Nro de errores superó el umbral $UMBRAL, enviando correo a $correoAdministrador.\n\e[0m"
   echo -e "\e[33mAPACHE:::Cantidad de errores encontrados: $errores404.\n\e[0m"
 
