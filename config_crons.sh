@@ -14,7 +14,6 @@ chmod +x "$daily_script"
 
 # Verificar que el cron job fue agregado correctamente
 echo -e "\e[34mCron job configurado para ejecutar $daily_script cada dia.\e[0m"
-crontab -l
 
 #----------------------------------------------------------------------------------------
 
@@ -29,8 +28,6 @@ chmod +x "$monthly_script"
 
 # Verificar que el cron job fue agregado correctamente
 echo -e "\e[34mCron job configurado para ejecutar $monthly_script cada mes.\e[0m"
-crontab -l
-
 
 #----------------------------------------------------------------------------------------
 
@@ -45,4 +42,6 @@ chmod +x "$apache_404_script"
 
 # Verificar que el cron job fue agregado correctamente
 echo -e "\e[34mCron job configurado para ejecutar $apache_404_script cada dia.\e[0m"
+
+#----------------------------------------------------------------------------------------
 crontab -l

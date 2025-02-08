@@ -2,7 +2,7 @@
 
 cd "$HOME/logRotation/projects_logs"
 
-UMBRAL= 5
+UMBRAL=5
 errores404=0
 correoAdministrador=juanito@uagrm.edu.bo
 echo -e "\e[33mAPACHE:::Iniciando revisión de logs de APACHE\n.\e[0m"
@@ -35,11 +35,11 @@ awk '$6 == "[error]" { errores404++; }
         print "Total de errores 404: " (errores404 ? errores404 : 0);
     }' "$LOG_APACHE" >> "$ARCHIVO"
 
-if [ $errores404 -gt $UMBRAL ] ; then
+if [ "$errores404" -gt "$UMBRAL" ] ; then
   echo -e "\e[33mAPACHE:::Nro de errores superó el umbral $UMBRAL, enviando correo a $correoAdministrador.\n\e[0m"
   echo -e "\e[33mAPACHE:::Cantidad de errores encontrados: $errores404.\n\e[0m"
-
 fi
+
 # Enviar el resumen por correo (modifica destinatario)
 #mail -s "Reporte de errores Apache - $FECHA" destinatario@correo.com < "$ARCHIVO"
 
