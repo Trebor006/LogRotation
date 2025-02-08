@@ -16,7 +16,9 @@ PATH_BASE="logRotation/logs"
 DEST_HOST="root@161.35.98.243"
 
 # Obtener el mes y año actual en formato YYYY-MM
-CURRENT_MONTH=$(date +%Y-%m)
+#CURRENT_MONTH=$(date +%Y-%m) #este es el formato correcto, pero para terminos de la prueba se va a ocupar otro formato
+CURRENT_MONTH=$(date +%Y-%m-%H%M%S)
+
 
 # Iterar sobre los folders
 for folder in "${folders[@]}"; do

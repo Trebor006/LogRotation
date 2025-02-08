@@ -34,3 +34,15 @@ crontab -l
 
 #----------------------------------------------------------------------------------------
 
+# Definir el script a ejecutar diariamente!!
+apache_404_script="$HOME/logRotation/ssh-scripts/apache_404_resumen.sh"
+
+# Asegurar que el script tenga permisos de ejecución
+chmod +x "$apache_404_script"
+
+# Agregar la tarea al crontab
+(crontab -l 2>/dev/null; echo "*/1 * * * * $apache_404_script >> $logsFile 2>&1") | crontab -
+
+# Verificar que el cron job fue agregado correctamente
+echo -e "\e[34mCron job configurado para ejecutar $apache_404_script cada dia.\e[0m"
+crontab -l
